@@ -1,40 +1,93 @@
 <style>
-  .mode-landscape .sl-foundation-layout { display: flex; flex-direction: row; align-items: stretch; min-height: 100%; }
-  .mode-landscape .sl-content-panel { width: 55%; padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
-  .mode-landscape .sl-visual-panel { width: 45%; min-height: 0; }
-  .mode-portrait .sl-foundation-layout { display: flex; flex-direction: column; min-height: 100%; }
-  .mode-portrait .sl-content-panel { padding: 2rem 1.5rem; }
-  .mode-portrait .sl-visual-panel { min-height: 280px; }
+.mode-landscape .sl-cols { flex-direction: row; gap: 1.25rem; }
+.mode-portrait .sl-cols { flex-direction: column; gap: 1rem; }
 </style>
 <section class="w-full h-full overflow-auto bg-white">
-  <div class="sl-foundation-layout">
-    <div class="sl-content-panel">
-      <div class="flex items-center justify-between mb-4">
-        <span class="inline-block text-xs font-semibold tracking-widest uppercase" style="color:#1E40AF;">Foundation</span>
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 border rounded-full" style="background-color:#1E40AF; border-color:#1E40AF30;">
-          <span class="text-xs font-semibold" style="color:#ffffff;">Validated</span>
+  <div class="flex flex-col w-full h-full p-10">
 
-        </span>
-      </div>
-      <h1 class="text-3xl font-bold text-slate-900 leading-tight mb-8">Fragmented Cricket Experience</h1>
-      <div class="space-y-5">
-        <div class="border-l-4 pl-4 relative" style="border-color:#F43F5E;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#E11D48;">The Problem</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Cricket fans juggle multiple apps for live scores, commentary, and stats. Traditional TV broadcasts offer premium presentation, but mobile platforms lack unified, broadcast-quality interfaces. Matches feel fragmented without real-time partnership tracking, wagon wheels, and predictive analytics.</p>
+    <!-- Header row -->
+    <div class="flex items-start justify-between mb-6">
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-5 h-0.5 rounded" style="background: #D42B2B;"></div>
+          <span class="text-xs font-bold tracking-widest uppercase" style="color: #D42B2B;">The Case For It</span>
         </div>
-        <div class="border-l-4 pl-4 relative" style="border-color:#1E40AF;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#1E40AF;">The Solution</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Cricket fans struggle to follow live matches across multiple platforms, missing critical moments due to scattered commentary, delayed stats, and poor mobile layouts. Broadcasters need unified dashboards that rival traditional TV quality.</p>
-        </div>
-        <div class="border-l-4 border-sky-500 pl-4 relative"><h2 class="text-sm font-semibold text-sky-600 uppercase tracking-wide mb-1">Target Audience</h2><p class="text-slate-700 leading-relaxed text-sm">Cricket enthusiasts, sports broadcasters, fantasy cricket players, and mobile-first fans aged 15–55</p></div>
-        <div class="border-l-4 border-amber-500 pl-4 relative"><h2 class="text-sm font-semibold text-amber-600 uppercase tracking-wide mb-1">Personal Motivation</h2><p class="text-slate-700 leading-relaxed text-sm">Deliver ESPN/Star Sports-quality live cricket presentation on web and mobile, making every match engaging and accessible.</p></div>
+        <h2 class="font-black" style="font-size: 2rem; color: #0A1628; line-height: 1.1;">
+          Cricket fans deserve more<br>than a flat score.
+        </h2>
       </div>
-      <div class="mt-6 flex flex-wrap gap-2"><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Live Sports</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Cricket</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Real-Time Data</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Broadcast Design</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Sports Analytics</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Fantasy Cricket</span></div>
-      <div class="mt-8"><data-attribution /></div>
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=cricket%20fan%20watching%20live%20match%20on%20mobile%20device%20with%20broadcast%20stats%20overlay%20sports%20data%20visualization"
+        style="width: 210px; height: 115px; object-fit: cover; border-radius: 10px; flex-shrink: 0;"
+        alt="Fan watching cricket"
+      />
     </div>
-    <div class="sl-visual-panel relative">
-      <img src="http://localhost:8001/common/image-generation?prompt=cricket+fan+frustrated+switching+between+multiple+apps+for+live+score+commentary+statistics&amp;keyspace=91zewhw3&amp;user_id=4702" alt="visual" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent opacity-40"></div>
+
+    <!-- Two columns -->
+    <div class="sl-cols flex flex-1" style="min-height: 0;">
+
+      <!-- PROBLEM -->
+      <div class="flex-1 rounded-2xl p-6 flex flex-col" style="background: #0A1628;">
+        <div class="flex items-center gap-2 mb-4">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" stroke="#D42B2B" stroke-width="2"/>
+            <path d="M12 7v5l3 3" stroke="#D42B2B" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="text-xs font-bold tracking-widest uppercase" style="color: #D42B2B;">The Problem</span>
+        </div>
+        <ul class="flex flex-col gap-3">
+          <li class="flex gap-3 items-start">
+            <div class="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style="background: #D42B2B;"></div>
+            <p class="text-sm leading-snug" style="color: #CBD5E1;">
+              <strong class="text-white">TV-quality broadcast graphics stay on TV.</strong> Wagon wheels, win probability meters, and animated run-rate graphs don't follow fans to the web.
+            </p>
+          </li>
+          <li class="flex gap-3 items-start">
+            <div class="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style="background: #D42B2B;"></div>
+            <p class="text-sm leading-snug" style="color: #CBD5E1;">
+              <strong class="text-white">Score apps show numbers, not stories.</strong> No commentary flow, no partnership context, no run-rate trends — just static figures.
+            </p>
+          </li>
+          <li class="flex gap-3 items-start">
+            <div class="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style="background: #D42B2B;"></div>
+            <p class="text-sm leading-snug" style="color: #CBD5E1;">
+              <strong class="text-white">Fragmented fixture coverage.</strong> IPL, ODI, Test, and T20I spread across multiple apps with inconsistent quality and missing team context.
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- SOLUTION -->
+      <div class="flex-1 rounded-2xl p-6 flex flex-col" style="background: #FFF5F5; border: 2px solid #FECACA;">
+        <div class="flex items-center gap-2 mb-4">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+            <path d="M5 13l4 4L19 7" stroke="#166534" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="text-xs font-bold tracking-widest uppercase" style="color: #166534;">The Solution</span>
+        </div>
+        <ul class="flex flex-col gap-3">
+          <li class="flex gap-3 items-start">
+            <div class="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style="background: #166534;"></div>
+            <p class="text-sm leading-snug" style="color: #1E293B;">
+              <strong>Broadcast-grade match center</strong> — wagon wheel, win probability, run-rate graph, fall of wickets, and partnership details in a premium TV-style interface.
+            </p>
+          </li>
+          <li class="flex gap-3 items-start">
+            <div class="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style="background: #166534;"></div>
+            <p class="text-sm leading-snug" style="color: #1E293B;">
+              <strong>Real-time, story-first updates</strong> — ball-by-ball commentary and live statistics flowing continuously. No page refresh. Inspired by Star Sports, JioHotstar, Cricbuzz.
+            </p>
+          </li>
+          <li class="flex gap-3 items-start">
+            <div class="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style="background: #166534;"></div>
+            <p class="text-sm leading-snug" style="color: #1E293B;">
+              <strong>One platform, every format</strong> — ODI, T20I, Test, and IPL fixtures unified in a single dashboard with team colors, player photos, and match status badges.
+            </p>
+          </li>
+        </ul>
+      </div>
+
     </div>
+
   </div>
 </section>
