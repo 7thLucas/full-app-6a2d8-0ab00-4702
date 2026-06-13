@@ -1,7 +1,53 @@
-"Create a professional cricket live broadcast dashboard similar to a sports TV telecast. Display a live match center featuring real-time scorecard, batting and bowling statistics, over-by-over commentary, wagon wheel, partnership details, run rate graph, required run rate, fall of wickets, and match summary. Include tabs for Live Match, Scorecard, Commentary, Statistics, Points Table, and Highlights. Show upcoming ODI, IPL, T20, Test, and international fixtures with date, time, venue, and team logos. Use a modern sports broadcast design with dynamic animations, team colors, player photos, match status indicators (LIVE, STUMPS, COMPLETED, UPCOMING), weather conditions, win probability meter, and premium TV graphics similar to Star Sports, JioHotstar, or Cricbuzz. Ultra-HD sports UI, responsive layout, realistic live cricket presentation."
+# CricLive — Product Overview
 
-For a website/app builder, use:
+## Product Identity
+**Working Name**: CricLive
+**Tagline**: Premium Cricket. Live. Broadcast-Grade.
+**Category**: Sports Broadcasting & Live Score Platform
+**Positioning**: A professional-grade cricket live broadcast dashboard delivering the full TV-telecast experience — real-time scores, ball-by-ball commentary, win probability, and match analytics — accessible on any device.
 
-"Build a Cricbuzz-style cricket platform with live scores, ball-by-ball commentary, scorecards, IPL schedule, ODI matches, upcoming fixtures, points tables, player stats, rankings, live telecast interface, match center, notifications, and real-time updates."
+## Users & Audience
+**Primary**: Cricket fans (casual to passionate) seeking real-time match data with broadcast-quality presentation
+**Secondary**: Fantasy cricket players monitoring live stats; sports analysts and journalists; cricket clubs and academies
+**Market**: India-first (IPL, international cricket) with global cricket audience reach
 
-This prompt works well with AI website generators, UI design tools, and image-generation models.
+## Product Scope
+
+### Live Match Center
+- Real-time scorecard (batting lineup + bowling figures)
+- Ball-by-ball / over-by-over commentary feed
+- Wagon wheel visualization
+- Partnership details & fall of wickets tracker
+- Run rate graph (current run rate + required run rate)
+- Win probability meter (dynamic, animated)
+- Weather conditions display
+- Match status indicators: LIVE · STUMPS · COMPLETED · UPCOMING
+
+### Navigation
+Tabs: **Live Match · Scorecard · Commentary · Statistics · Points Table · Highlights**
+
+### Fixtures & Schedule
+Covers: ODI, IPL, T20I, Test, and international series
+Per fixture: date, time, venue, team logos, match status badge
+
+### Design System
+- Ultra-HD sports broadcast UI with dynamic animations
+- Team color theming per match
+- Player photos
+- Premium TV-style graphics (inspired by Star Sports, JioHotstar, Cricbuzz)
+- Responsive layout: desktop · tablet · mobile
+
+## Brand & Tone
+**Voice**: Energetic, authoritative, broadcast-grade
+**Visual Style**: Deep broadcast palette with vivid team colors, bold display type, cinematic motion
+**Inspiration**: Star Sports, JioHotstar, Cricbuzz
+**Feel**: The match on your screen — not just the score
+
+## Core Value Proposition
+Brings the full cricket broadcast experience — normally locked to premium sports TV channels — directly to the browser, adding interactive statistics and real-time analytics that go beyond passive viewing.
+
+## Strategic Principles
+1. **Broadcast-first design** — Every UI decision references professional TV telecast quality
+2. **Real-time as default** — Scores, commentary, and stats update live without page refresh
+3. **Depth with accessibility** — Rich analytics (wagon wheel, win probability) remain digestible for casual fans
+4. **Multi-format coverage** — ODI, T20, Test, IPL all on one platform
