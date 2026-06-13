@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #0A0E1A;
+    --foreground: #F9FAFB;
+    --card: #111827;
+    --card-foreground: #F9FAFB;
+    --popover: #111827;
+    --popover-foreground: #F9FAFB;
+    --primary: #EF4444;
+    --primary-foreground: #ffffff;
+    --secondary: #1A2235;
+    --secondary-foreground: #F9FAFB;
+    --muted: #1E2D40;
+    --muted-foreground: #9CA3AF;
+    --accent: #F59E0B;
+    --accent-foreground: #0A0E1A;
+    --destructive: #ef4444;
+    --destructive-foreground: #fafafa;
+    --border: #1F2F44;
+    --input: #1A2235;
+    --ring: #EF4444;
+    --radius: 0.5rem;
+    --chart-1: #3B82F6;
+    --chart-2: #10B981;
+    --chart-3: #F59E0B;
+    --chart-4: #8B5CF6;
+    --chart-5: #EC4899;
+    --navbar-background: #0A0E1A;
+    --sidebar-background: #0A0E1A;
+    --sidebar-foreground: #F9FAFB;
+    --sidebar-primary: #EF4444;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #1A2235;
+    --sidebar-accent-foreground: #F9FAFB;
+    --sidebar-border: #1F2F44;
+    --sidebar-ring: #EF4444;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #0A0E1A;
+    color: #F9FAFB;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0E1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F2F44;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2A3F55;
+}
+
+/* Live pulse animation */
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Score flash animation */
+@keyframes score-flash {
+  0% { background-color: transparent; }
+  30% { background-color: rgba(245, 158, 11, 0.35); }
+  100% { background-color: transparent; }
+}
+
+/* Commentary slide in */
+@keyframes slide-in-top {
+  0% { transform: translateY(-10px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Live ticker scroll */
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-live-pulse {
+  animation: live-pulse 1.2s ease-in-out infinite;
+}
+
+.animate-score-flash {
+  animation: score-flash 1s ease-out;
+}
+
+.animate-slide-in-top {
+  animation: slide-in-top 0.2s ease-out;
+}
+
+.animate-ticker-scroll {
+  animation: ticker-scroll 30s linear infinite;
+}
+
+/* Win probability bar transitions */
+.win-prob-bar {
+  transition: width 0.5s ease-in-out;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Tab transitions */
+.tab-panel {
+  animation: slide-in-top 0.15s ease-out;
+}
+
+/* Broadcast score font */
+.font-score {
+  font-family: 'Oswald', 'Barlow Condensed', sans-serif;
+}
+
+/* Broadcast display font */
+.font-display {
+  font-family: 'Barlow Condensed', 'Oswald', sans-serif;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-live-pulse,
+  .animate-score-flash,
+  .animate-slide-in-top,
+  .animate-ticker-scroll {
+    animation: none;
+  }
+
+  .win-prob-bar {
+    transition: none;
+  }
+
+  .card-hover:hover {
+    transform: none;
+  }
+}
