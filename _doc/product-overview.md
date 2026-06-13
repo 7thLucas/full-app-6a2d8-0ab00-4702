@@ -1,0 +1,7 @@
+"Create a professional cricket live broadcast dashboard similar to a sports TV telecast. Display a live match center featuring real-time scorecard, batting and bowling statistics, over-by-over commentary, wagon wheel, partnership details, run rate graph, required run rate, fall of wickets, and match summary. Include tabs for Live Match, Scorecard, Commentary, Statistics, Points Table, and Highlights. Show upcoming ODI, IPL, T20, Test, and international fixtures with date, time, venue, and team logos. Use a modern sports broadcast design with dynamic animations, team colors, player photos, match status indicators (LIVE, STUMPS, COMPLETED, UPCOMING), weather conditions, win probability meter, and premium TV graphics similar to Star Sports, JioHotstar, or Cricbuzz. Ultra-HD sports UI, responsive layout, realistic live cricket presentation."
+
+For a website/app builder, use:
+
+"Build a Cricbuzz-style cricket platform with live scores, ball-by-ball commentary, scorecards, IPL schedule, ODI matches, upcoming fixtures, points tables, player stats, rankings, live telecast interface, match center, notifications, and real-time updates."
+
+This prompt works well with AI website generators, UI design tools, and image-generation models.
