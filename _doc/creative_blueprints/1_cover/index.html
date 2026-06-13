@@ -1,39 +1,58 @@
 <style>
-  .mode-landscape .sl-cover-layout { display: flex; flex-direction: row; align-items: stretch; min-height: 100%; }
-  .mode-landscape .sl-content-panel { width: 55%; display: flex; flex-direction: column; justify-content: center; }
-  .mode-landscape .sl-image-panel { width: 45%; min-height: 0; }
-  .mode-portrait .sl-cover-layout { display: flex; flex-direction: column; min-height: 100%; }
-  .mode-portrait .sl-content-panel { flex: 1; display: flex; flex-direction: column; justify-content: center; padding-bottom: 1.5rem; }
-  .mode-portrait .sl-image-panel { min-height: 280px; flex-shrink: 0; }
+.mode-landscape .sl-root { flex-direction: row; }
+.mode-portrait .sl-root { flex-direction: column; }
+.mode-landscape .sl-left { flex: 0 0 52%; }
+.mode-landscape .sl-right { flex: 1; }
+.mode-portrait .sl-left { flex: 1; }
+.mode-portrait .sl-right { flex: 0 0 38%; }
 </style>
 <section class="w-full h-full overflow-auto bg-white">
-  <div class="sl-cover-layout h-full">
-    <div class="sl-content-panel px-10 py-12">
-      <div class="flex flex-col justify-between h-full">
-        <div>
-          <p class="text-sm font-medium tracking-widest uppercase mb-6" style="color:#1E40AF;">Cricket Broadcast Engineer</p>
-          <h1 class="text-5xl font-bold text-slate-900 leading-tight mb-6">Professional Cricket Live Broadcast Dashboard</h1>
-          <p class="text-xl text-slate-600 leading-relaxed max-w-md mb-6">Real-time match center with scorecard, commentary, statistics, and wagon wheels—broadcast-quality sports UI for modern cricket fans.</p>
-          <div class="inline-flex items-center gap-3 border rounded-lg px-4 py-3" style="background-color:#DC2626; border-color:#1E40AF40;">
-            <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:#1E40AF;">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-            <span class="text-sm font-medium px-1" style="color:#ffffff;">Core vision: Simplified productivity</span>
+  <div class="sl-root flex w-full h-full">
 
-          </div>
-        </div>
-        <div class="mt-auto pt-8">
-          <data-attribution />
-        </div>
+    <!-- LEFT PANEL -->
+    <div class="sl-left flex flex-col justify-between p-10" style="background: #0A1628;">
+
+      <!-- Top label -->
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-0.5 rounded-full" style="background: #D42B2B;"></div>
+        <span class="text-xs font-bold tracking-widest uppercase" style="color: #D42B2B;">Live Cricket Platform</span>
       </div>
-    </div>
-    <div class="sl-image-panel relative overflow-hidden">
-      <div class="absolute inset-0" style="background:linear-gradient(135deg, #1E40AF, #1E40AF20);"></div>
-      <div class="absolute inset-0 flex items-center justify-center p-8">
-        <img src="http://localhost:8001/common/image-generation?prompt=professional+cricket+live+scorecard+dashboard+real-time+statistics+broadcast+quality+design&amp;keyspace=91zewhw3&amp;user_id=4702" alt="cover" class="max-w-full max-h-full object-contain drop-shadow-2xl rounded-2xl" />
+
+      <!-- Headline + tagline -->
+      <div>
+        <h1 class="font-black leading-none mb-5" style="font-size: 3.4rem; color: #FFFFFF; line-height: 1.05;">
+          Cricket.<br>
+          <span style="color: #D42B2B;">Live.</span><br>
+          <span style="color: #F5A623;">Broadcast&#8209;Grade.</span>
+        </h1>
+        <p class="text-sm leading-relaxed" style="color: #94A3B8; max-width: 360px;">
+          The full TV&#8209;telecast experience on your device — real&#8209;time scorecards, ball&#8209;by&#8209;ball commentary, win probability, and stadium&#8209;grade graphics.
+        </p>
       </div>
+
+      <!-- Format chips + attribution -->
+      <div>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="px-3 py-1 rounded-full text-xs font-bold text-white" style="background: #D42B2B;">IPL</span>
+          <span class="px-3 py-1 rounded-full text-xs font-bold text-white" style="background: #1D4ED8;">ODI</span>
+          <span class="px-3 py-1 rounded-full text-xs font-bold" style="background: #F5A623; color: #0A1628;">T20</span>
+          <span class="px-3 py-1 rounded-full text-xs font-bold text-white" style="background: #166534;">Test</span>
+        </div>
+        <data-attribution />
+      </div>
+
     </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="sl-right relative overflow-hidden">
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=professional%20cricket%20stadium%20night%20match%20dramatic%20floodlights%20cinematic%20broadcast%20TV%20graphics%20scorecard%20overlay%20premium%20sports%20atmosphere"
+        class="w-full h-full"
+        style="object-fit: cover; object-position: center;"
+        alt="Cricket broadcast"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(10,22,40,0.45) 0%, transparent 35%);"></div>
+    </div>
+
   </div>
 </section>
