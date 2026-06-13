@@ -95,7 +95,7 @@ export default function App() {
         <RouteChangeReporter />
         <ConfigurablesProvider>
           <ConfigurablesCSSBridge />
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
             <Outlet />
           </ThemeProvider>
         </ConfigurablesProvider>
