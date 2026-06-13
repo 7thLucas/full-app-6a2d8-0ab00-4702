@@ -1,7 +1,7 @@
-# CricLive — Product Overview
+# criclive.arpit — Product Overview
 
 ## Product Identity
-**Working Name**: CricLive
+**Working Name**: criclive.arpit
 **Tagline**: Premium Cricket. Live. Broadcast-Grade.
 **Category**: Sports Broadcasting & Live Score Platform
 **Positioning**: A professional-grade cricket live broadcast dashboard delivering the full TV-telecast experience — real-time scores, ball-by-ball commentary, win probability, and match analytics — accessible on any device.
